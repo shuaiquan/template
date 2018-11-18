@@ -1,0 +1,37 @@
+{
+  "name": "project-tpl",
+  "version": "0.1.0",
+  "description": "this is project template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors --bail",
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuaiquan/project-tpl.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "shuaiquan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shuaiquan/project-tpl/issues"
+  },
+  "homepage": "https://github.com/shuaiquan/project-tpl#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
