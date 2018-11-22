@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const config = {
     // none, production(default), deveploment
@@ -8,6 +9,16 @@ const config = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './build'),
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, './build'),
+        port: 9000,
+        clientLogLevel: 'warning',
+        hot: true,
+    },
+    plugins: [
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+    ],
     module: {
         rules: [
             {
