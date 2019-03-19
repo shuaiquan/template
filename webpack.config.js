@@ -8,19 +8,27 @@ const config = {
     devtool: "source-map",
 
     entry: path.resolve(__dirname, './src/index.tsx'),
+
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './build'),
     },
 
     devServer: {
-        contentBase: path.resolve(__dirname, './src'),
+        contentBase: path.resolve(__dirname, './build'),
         port: 9000,
-        clientLogLevel: 'warning',
+        // Enable Hot Module Replacement
         hot: true,
+        // set log level
+        clientLogLevel: 'warning',
+        // default open Page
+        openPage: './index.html',
+        // don't show supress messages 
+        noInfo: true,
     },
 
     plugins: [
+        // use for Hot Module Replacement
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
