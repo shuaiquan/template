@@ -3,3 +3,5 @@ node_modules/*
 
 # 编译后文件
 build/*
+
+.eslintrc.js
