@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "outDir": "./types",
         "module": "ESNext",
         "target": "es6",
         "allowJs": false,
