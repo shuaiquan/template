@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const webpackConfig = {
     mode: isProd ? 'production' : 'development',
 
-    entry: path.resolve(__dirname, './src/index.js'),
+    entry: path.resolve(__dirname, './src/index.ts'),
 
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -18,7 +18,10 @@ const webpackConfig = {
         contentBase: path.resolve(__dirname, './dist'),
         port: 9000,
         hot: true,
-        // hotOnly: true,
+    },
+
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
 
     plugins: [
@@ -37,7 +40,12 @@ const webpackConfig = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ]
     }
 }

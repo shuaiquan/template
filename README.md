@@ -1,9 +1,9 @@
-# 使用 JavaScript 开发的项目模板
+# 使用 TypeScript 开发的项目模板
 这是一份可以快速开发 JS 项目的模版
 
 ### 目录说明
 
-开发目录为 `src` 文件夹，入口文件 `src/index.js`。
+开发目录为 `src` 文件夹，入口文件 `src/index.ts`。
 ```javascript
 import { hot } from 'hot';
 
@@ -29,4 +29,4 @@ npm run build
 ```
 
 ### 备注说明
-当前模板使用 webpack 进行模块的打包编译，默认仅支持 JS 文件
+当前模板使用 webpack 进行模块的打包编译，默认仅支持 TS 文件

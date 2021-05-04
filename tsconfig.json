@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "es6",
+        "allowJs": false,
+        "declaration": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "lib": [
+            "DOM",
+            "ESNext"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "compileOnSave": true
+}
