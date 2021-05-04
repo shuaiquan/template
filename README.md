@@ -3,7 +3,7 @@
 
 ### 目录说明
 
-开发目录为 `src` 文件夹，入口文件 `src/index.ts`。
+开发目录为 `src` 文件夹，入口文件 `src/index.tsx`。
 ```javascript
 import { hot } from 'hot';
 
@@ -29,4 +29,4 @@ npm run build
 ```
 
 ### 备注说明
-当前模板使用 webpack 进行模块的打包编译，默认仅支持 TS 文件
+当前模板使用 webpack 进行模块的打包编译，默认仅支持 TS（TSX） 文件（支持 React 开发）

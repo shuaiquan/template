@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const webpackConfig = {
     mode: isProd ? 'production' : 'development',
 
-    entry: path.resolve(__dirname, './src/index.ts'),
+    entry: path.resolve(__dirname, './src/index.tsx'),
 
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -22,7 +22,7 @@ const webpackConfig = {
     },
 
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.jsx', '.js'],
     },
 
     plugins: [
@@ -36,16 +36,14 @@ const webpackConfig = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                use: 'babel-loader'
             },
             {
-                test: /\.ts$/,
-                use: 'ts-loader',
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
+                use: 'ts-loader',
             },
         ]
     }
